@@ -1,0 +1,17 @@
+import math
+def isPrime(n):
+    for i in range(2, int(math.sqrt(n) + 1)):
+        if (n % i == 0):
+            return False
+    return n > 1
+for t in range(int(input())):
+    a, b = (int (i) for i in input().split())
+    while (b != 0):
+        a, b = b, a % b
+    x = 0
+    for i in str(a):
+        x += int(i)
+    if (isPrime(x)):
+        print('YES')
+    else:
+        print('NO')
