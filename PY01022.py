@@ -1,10 +1,11 @@
 n = input()
-sum = 0
 cnt = 0
+if len(n) == 1:
+    cnt = 1
 while len(n) > 1:
-    sum = 0
+    s = 0
     for i in n:
-        sum += int(i)
-    n = str(sum)
+        s += (ord(i) - ord('0'))
+    n = str(s)
     cnt += 1
 print(cnt)
